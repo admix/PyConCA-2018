@@ -93,40 +93,105 @@ df = cat.useful()
 ```
 
 -----------------------------------------------------------------------------------------------------------------
-### TALK 3: How to approach scaling Python Web Apps
+### TALK 3: How to approach scaling Python Web Apps. [@dorianpula](https://twitter.com/dorianpula)
 -----------------------------------------------------------------------------------------------------------------
+- what does it mean to scale a system:
+  - developing at a reasonable time and cost
+  - shipping the results to end users
+  - operating the system with minimal downtime
+  - succeeding without inflicting a significant cost to yourself or your team
 
+- Scaling concerns:
+  - Functional
+    - what features and functionalities we provide
+  - Non-functional?!
+  - Developmental
+    - how easy to develop and maintain
+    - how difficult to on-board new developers
+    - how testable
+  - Operational
 
+- Scale by design:
+  - what is the problem we trying to solve
+    - understand the business need
+    - the more focused the better the result
+    - even DDD can't help if you don't know the boundaries of your problem
 
+  - complexity is the enemy of scaling
+    - the general case is hard to solve
+    - more complexity -> less able to change
+    - problem of agile/scrum etc..
 
+>Less is More
+
+- Development Guidelines
+  - Write for the present
+    - not for the future
+    - keep it right
+  - break out code as you go
+    - you can always micro-service it, monorepo it, or ship it
+  - don't write a framework
+
+- Scaling Operations
+  - if you don't ship it - it doesn't count
+  - ops are your friends
+    - they help ship etc
+    - help them - help you
+
+- Ops
+  - monitoring
+  - logging (syslog)
+  - error logging (sentry)
+  - measure performance etc (Newrelic)
+  - don't use logs for performance measurement
+  - what is the state of production
+  - automated provisioning (Fabric,Bash,Ansible,Chef,Kubernetes)
+
+- 3 Scaling Techniques
+  - Architecture 
+    - Micro-services
+    - Monolith
+    - Pre-Rendered Content
+    - Mix and Match 
 
 -----------------------------------------------------------------------------------------------------------------
-### TALK 4: Keynote #2 - Holden Karau
+### TALK 4: Keynote #2 - Holden Karau [@holdenkarau](https://twitter.com/holdenkarau)
 -----------------------------------------------------------------------------------------------------------------
-
-
-
-
+- meh, spark stuff
 
 -----------------------------------------------------------------------------------------------------------------
-### TALK 5: Detecting Supernovas
+### TALK 5: Detecting Supernovas Pippin Lee [@pippinlee](https://twitter.com/pippinlee)
 -----------------------------------------------------------------------------------------------------------------
-
-
+- [astropy](https://github.com/astropy/astropy)
+- [astroML](https://github.com/astroML)
 
 -----------------------------------------------------------------------------------------------------------------
 ### TALK 6: What a bug can teach you about Python
 -----------------------------------------------------------------------------------------------------------------
+Python Heap store a small_int_array with -5 to 256 ints. If the var you wanna store is > 256 then it will create a new PyLongObject in Python Heap and the reference for every PyLongObject will be different. 
 
 
 
 -----------------------------------------------------------------------------------------------------------------
 ### TALK 7: The adventure of a Python Script
 -----------------------------------------------------------------------------------------------------------------
-
+Reverse engineer with CPython
 
 
 
 -----------------------------------------------------------------------------------------------------------------
 ### TALK 8: Flying Python...
 -----------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------
+### TALK 9: pytest-bdd
+-----------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------
+### TALK 10: asyncio
+-----------------------------------------------------------------------------------------------------------------
+
+
+
